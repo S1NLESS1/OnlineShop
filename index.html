@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang = "ru">
+    
+<head>
+    <meta charset = "UTF-8">
+    <link rel = "stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300;400&display=swap" rel="stylesheet">
+    <link rel = "stylesheet" href ="assets/css/font-awesome.css" type="text/css">
+</head>
+    
+<header class="header">
+    <div class = "container">
+        <div class = "header_inner">
+            <a class ="header__logo" href = "#"> KapousCrimea</a>
+            <nav class="nav">
+                <a class = "nav__link" href="#"><i class="fa fa-address-book" aria-hidden="true"></i>Каталог</a>
+                <a class = "nav__link" href="#">Оплата и доставка</a>
+                <a class = "nav__link" href="#">Отзывы</a>
+                <a class = "nav__link" href="#">Контакты</a>
+                <a class = "nav__link" href="#">Корзина</a>
+            </nav>
+        </div>
+    </div>
+</header>
+            
+    
+<body> 
+    <div class = "intro">
+        <div class="container">
+            <div class = "container_logo">
+                <div class = "Center_logo">Добро пожаловать в KapousCrimea</div>
+            </div>
+        </div>   
+    </div>
+    
+    <section class = "section">
+        <div class = "container">
+            <div class = "section_header">
+                <h3 class = "section_suptitle">О бренде</h3>
+                <h2 class = "section_title">Бренд косметики Kapous</h2>
+                <div class = "about_text">Kapous – это премиальный бренд косметики для волос, производимый в Европе. Kapous уже более 20 лет находится в косметических салонах России и помогает всем женщинам и мужчинам следить за своими волосами. В его линейке есть всё, что поможет вам сделать ваши волосы восхитительными, и ухаживать за ними долго и надёжно!</div>
+                <div class = "about_text">Мы – официальные дистрибьютеры бренда Kapous на территории республики Крым и г.Севастополя</div>
+            </div>
+    
+<!--
+        <div class = "about">
+            <div class = "about_item">
+                <div class = "about_img">
+                    <img src = "assets/images/about2_350.jpg" alt="">
+                </div>
+            </div>
+            <div class = "about_item">
+                <div class = "about_img_2">
+                    <img src = "assets/images/about1_350.jpg" alt = "">
+                </div>
+            </div>
+            
+            <div class = "about_item">
+                <div class = "about_img">
+                    <img src = "assets/images/about3_350.jpg" alt = "">
+                </div>
+            </div>
+        </div>
+-->
+            <div id="content-slider">
+                <div id="slider">  <!-- Контейнер для слайдера -->
+                    <div id="mask">  <!-- Маска -->
+
+                        <ul>
+                            <li id="first" class="firstanimation">  <!-- ID для всплывающей подсказки и класс для анимации -->
+                                <a href="#"> <img src="assets/images/model1.jpg" alt=""/> </a>
+                            </li>
+
+                            <li id="second" class="secondanimation">
+                                <a href="#"> <img src="assets/images/model2.jpg" alt=""/> </a>
+                            </li>
+
+                            <li id="third" class="thirdanimation">
+                                <a href="#"> <img src="assets/images/model3.jpg" alt=""/> </a>
+                            </li>
+
+                            <li id="fourth" class="fourthanimation">
+                                <a href="#"> <img src="assets/images/model4.jpg" alt=""/> </a>
+                            </li>
+
+                            <li id="fifth" class="fifthanimation">
+                                <a href="#"> <img src="assets/images/model5.jpg" alt=""/> </a>
+                            </li>
+                        </ul>
+                    </div>  <!-- Конец маски -->
+            
+                    <div class="progress-bar"></div>  <!-- Строка выполнения-->
+                </div>  <!-- Конец контейнера для слайдера -->
+            </div>
+            
+            
+        </div>
+    </section>
+    
+    <section class = "products">
+        <div class = "container">
+            <container_catalog class = "container_catalog">
+                <a class = "catalog_text_main">Каталог</a>
+                <ul class = "main_item">
+                    <li><a  class="catalog_text" href="javascript:void(0)">Шампуни</a>
+                        
+                            <ul class = "ul_li">
+                                <li class = ""><button class = "btn_nav catalog_nav_buttons" type = "button" data-filter="Keratin">Кератин</button></li>
+                                <li class = ""><button class = "btn_nav catalog_nav_buttons" type = "button" data-filter="Fruits">Фруктовые</button></li>
+                                <li class = ""><button class = "btn_nav catalog_nav_buttons" type = "button" data-filter="Profession">Проф</button></li>
+                                <li class = ""><button class = "btn_nav catalog_nav_buttons" type = "button" data-filter="Cheap">Дешёвые</button></li>
+                            </ul>  
+                        
+                    </li>
+                    <li><a class = "catalog_text" href="javascript:void(0)">Бальзамы</a>
+                        <ul class = "ul_li">    
+                            <li><a class = "catalog_text_mini" href = "#">Фруктовые</a></li>
+                            <li><a class = "catalog_text_mini" href = "#">Проф</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li><a class = "catalog_text" href="javascript:void(0)">Маски для волос</a>
+                        <ul class = "ul_li">
+                            <li><a class = "catalog_text_mini" href = "#">Амиачные</a></li>
+                            <li><a class = "catalog_text_mini" href = "#">Безамиачные</a></li>
+                            <li><a class = "catalog_text_mini" href = "#">Крутые</a></li>
+                            <li><a class = "catalog_text_mini" href = "#">Дешёвые</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li><a class = "catalog_text" href="javascript:void(0)">Сыворотки</a>
+                        <ul class = "ul_li">
+                            <li><a class = "catalog_text_mini" href = "#">Амиачные</a></li>
+                            <li><a class = "catalog_text_mini" href = "#">Безамиачные</a></li>
+                            <li><a class = "catalog_text_mini" href = "#">Крутые</a></li>
+                            <li><a class = "catalog_text_mini" href = "#">Дешёвые</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li><a class = "catalog_text" href="javascript:void(0)">Краски</a>
+                        <ul class = "ul_li">
+                            <li><a class = "catalog_text_mini" href = "#">Амиачные</a></li>
+                            <li><a class = "catalog_text_mini" href = "#">Безамиачные</a></li>
+                            <li><a class = "catalog_text_mini" href = "#">Крутые</a></li>
+                            <li><a class = "catalog_text_mini" href = "#">Дешёвые</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li><a class = "catalog_text" href="javascript:void(0)">Инструменты</a>
+                    <ul class = "ul_li">
+                            <li><a class = "catalog_text_mini" href = "#">Расчёски,браши</a></li>
+                            <li><a class = "catalog_text_mini" href = "#">Ножницы</a></li>
+                            <li><a class = "catalog_text_mini" href = "#">Пеньуары</a></li>
+                            <li><a class = "catalog_text_mini" href = "#">Фены</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </container_catalog>
+            
+            <section class="section_catalog">
+                <div class = "container_2">
+                    <header class="section_header_catalog">
+                        <h2 class = "section_title_catalog">Каталог</h2>
+                    </header>
+            
+                    <div class = "catalog">
+                        <div class = "catalog_item" data-category ="Keratin">
+                            <div class ="product">
+                                <img src = "assets/images/kapous_1_0_newjpg.jpg" alt = "" class = "product_img">
+                                <div class = "product_content">
+                                    <h3 class = "product_title">1.0 Чёрный</h3>
+                                    <p class ="product_description">Чёрная краска</p>
+                                </div>
+                                <footer class ="product_footer">
+                                    <div class ="product_bottom">
+                                        <div class = "product_price">
+                                            <span class = "product_price_value">215</span>
+                                            <span class = "product_currency">&#8381;</span>
+                                        </div>
+                                        <button class = "btn product_btn" type = "button">В корзину</button>
+                                    </div>
+                                </footer>
+                            </div>
+                        </div>
+                        
+                        <div class = "catalog_item">
+                            <div class ="product">
+                                <img src = "assets/images/kapous_1_0_newjpg.jpg" alt = "" class = "product_img">
+                                <div class = "product_content">
+                                    <h3 class = "product_title">1.0 Чёрный</h3>
+                                    <p class ="product_description">Чёрная краска</p>
+                                </div>
+                                <footer class ="product_footer">
+                                    <div class ="product_bottom">
+                                        <div class = "product_price">
+                                            <span class = "product_price_value">215</span>
+                                            <span class = "product_currency">&#8381;</span>
+                                        </div>
+                                        <button class = "btn product_btn" type = "button">В корзину</button>
+                                    </div>
+                                </footer>
+                            </div>
+                        </div>
+                        
+                        <div class = "catalog_item" data-category ="Profession">
+                            <div class ="product">
+                                <img src = "assets/images/kapous_1_0_newjpg.jpg" alt = "" class = "product_img">
+                                <div class = "product_content">
+                                    <h3 class = "product_title">1.0 Чёрный</h3>
+                                    <p class ="product_description">Чёрная краска</p>
+                                </div>
+                                <footer class ="product_footer">
+                                    <div class ="product_bottom">
+                                        <div class = "product_price">
+                                            <span class = "product_price_value">215</span>
+                                            <span class = "product_currency">&#8381;</span>
+                                        </div>
+                                        <button class = "btn product_btn" type = "button">В корзину</button>
+                                    </div>
+                                </footer>
+                            </div>
+                        </div>
+                        
+                        <div class = "catalog_item" data-category ="Cheap">
+                            <div class ="product">
+                                <img src = "assets/images/kapous_1_0_newjpg.jpg" alt = "" class = "product_img">
+                                <div class = "product_content">
+                                    <h3 class = "product_title">1.0 Чёрный</h3>
+                                    <p class ="product_description">Чёрная краска</p>
+                                </div>
+                                <footer class ="product_footer">
+                                    <div class ="product_bottom">
+                                        <div class = "product_price">
+                                            <span class = "product_price_value">215</span>
+                                            <span class = "product_currency">&#8381;</span>
+                                        </div>
+                                        <button class = "btn product_btn" type = "button">В корзину</button>
+                                    </div>
+                                </footer>
+                            </div>
+                        </div>
+                        
+                        <div class = "catalog_item" data-category ="Fruits">
+                            <div class ="product">
+                                <img src = "assets/images/kapous_1_0_newjpg.jpg" alt = "" class = "product_img">
+                                <div class = "product_content">
+                                    <h3 class = "product_title">1.0 Чёрный</h3>
+                                    <p class ="product_description">Чёрная краска</p>
+                                </div>
+                                <footer class ="product_footer">
+                                    <div class ="product_bottom">
+                                        <div class = "product_price">
+                                            <span class = "product_price_value">215</span>
+                                            <span class = "product_currency">&#8381;</span>
+                                        </div>
+                                        <button class = "btn product_btn" type = "button">В корзину</button>
+                                    </div>
+                                </footer>
+                            </div>
+                        </div><div class = "catalog_item">
+                            <div class ="product">
+                                <img src = "assets/images/kapous_1_0_newjpg.jpg" alt = "" class = "product_img">
+                                <div class = "product_content">
+                                    <h3 class = "product_title">1.0 Чёрный</h3>
+                                    <p class ="product_description">Чёрная краска</p>
+                                </div>
+                                <footer class ="product_footer">
+                                    <div class ="product_bottom">
+                                        <div class = "product_price">
+                                            <span class = "product_price_value">215</span>
+                                            <span class = "product_currency">&#8381;</span>
+                                        </div>
+                                        <button class = "btn product_btn" type = "button">В корзину</button>
+                                    </div>
+                                </footer>
+                            </div>
+                        </div><div class = "catalog_item">
+                            <div class ="product">
+                                <img src = "assets/images/kapous_1_0_newjpg.jpg" alt = "" class = "product_img">
+                                <div class = "product_content">
+                                    <h3 class = "product_title">1.0 Чёрный</h3>
+                                    <p class ="product_description">Чёрная краска</p>
+                                </div>
+                                <footer class ="product_footer">
+                                    <div class ="product_bottom">
+                                        <div class = "product_price">
+                                            <span class = "product_price_value">215</span>
+                                            <span class = "product_currency">&#8381;</span>
+                                        </div>
+                                        <button class = "btn product_btn" type = "button">В корзину</button>
+                                    </div>
+                                </footer>
+                            </div>
+                        </div><div class = "catalog_item">
+                            <div class ="product">
+                                <img src = "assets/images/kapous_1_0_newjpg.jpg" alt = "" class = "product_img">
+                                <div class = "product_content">
+                                    <h3 class = "product_title">1.0 Чёрный</h3>
+                                    <p class ="product_description">Чёрная краска</p>
+                                </div>
+                                <footer class ="product_footer">
+                                    <div class ="product_bottom">
+                                        <div class = "product_price">
+                                            <span class = "product_price_value">215</span>
+                                            <span class = "product_currency">&#8381;</span>
+                                        </div>
+                                        <button class = "btn product_btn" type = "button">В корзину</button>
+                                    </div>
+                                </footer>
+                            </div>
+                        </div>
+                        
+                        <div class = "catalog_item">
+                            <div class ="product">
+                                <img src = "assets/images/kapous_1_0_newjpg.jpg" alt = "" class = "product_img">
+                                <div class = "product_content">
+                                    <h3 class = "product_title">1.0 Чёрный</h3>
+                                    <p class ="product_description">Чёрная краска</p>
+                                </div>
+                                <footer class ="product_footer">
+                                    <div class ="product_bottom">
+                                        <div class = "product_price">
+                                            <span class = "product_price_value">215</span>
+                                            <span class = "product_currency">&#8381;</span>
+                                        </div>
+                                        <button class = "btn product_btn" type = "button">В корзину</button>
+                                    </div>
+                                    
+                                    
+                                </footer>
+                            </div>
+                        </div>
+                        
+                        <div class = "catalog_item">
+                            <div class ="product">
+                                <img src = "assets/images/kapous_1_0_newjpg.jpg" alt = "" class = "product_img">
+                                <div class = "product_content">
+                                    <h3 class = "product_title">1.0 Чёрный</h3>
+                                    <p class ="product_description">Чёрная краска</p>
+                                </div>
+                                <footer class ="product_footer">
+                                    <div class ="product_bottom">
+                                        <div class = "product_price">
+                                            <span class = "product_price_value">215</span>
+                                            <span class = "product_currency">&#8381;</span>
+                                        </div>
+                                        <button class = "btn product_btn" type = "button">В корзину</button>
+                                    </div>
+                                </footer>
+                            </div>
+                        </div>
+                        
+                        <div class = "catalog_item">
+                            <div class ="product">
+                                <img src = "assets/images/kapous_1_0_newjpg.jpg" alt = "" class = "product_img">
+                                <div class = "product_content">
+                                    <h3 class = "product_title">1.0 Чёрный</h3>
+                                    <p class ="product_description">Чёрная краска</p>
+                                </div>
+                                <footer class ="product_footer">
+                                    <div class ="product_bottom">
+                                        <div class = "product_price">
+                                            <span class = "product_price_value">215</span>
+                                            <span class = "product_currency">&#8381;</span>
+                                        </div>
+                                        <button class = "btn product_btn" type = "button">В корзину</button>
+                                    </div>
+                                    
+                                    
+                                </footer>
+                            </div>
+                        </div>
+                        
+                        <div class = "catalog_item">
+                            <div class ="product">
+                                <img src = "assets/images/kapous_1_0_newjpg.jpg" alt = "" class = "product_img">
+                                <div class = "product_content">
+                                    <h3 class = "product_title">1.0 Чёрный</h3>
+                                    <p class ="product_description">Чёрная краска</p>
+                                </div>
+                                <footer class ="product_footer">
+                                    <div class ="product_bottom">
+                                        <div class = "product_price">
+                                            <span class = "product_price_value">215</span>
+                                            <span class = "product_currency">&#8381;</span>
+                                        </div>
+                                        <button class = "btn product_btn" type = "button">В корзину</button>
+                                    </div>
+                                    
+                                    
+                                </footer>
+                            </div>
+                        </div>
+                        
+                    </div>    
+                </div>
+            </section>
+        </div>
+    </section>
+    
+</body>  
+    
+<bot_info>
+    <header_bot_container class="bot_container">
+        <div class = "container">
+            <div>
+                <a class = "bot_info" href="#">Контакты</a>
+                <a class = "bot_info" href="#">Отзывы</a>
+                <a class = "bot_info" href="#">Доставка</a>
+            </div>
+            
+            <div >
+                <a class = "bot_info" href="#">Акции</a>
+                <a class = "bot_info" href="#">Каталог</a>
+                <a class = "bot_info" href="#">Обратная связь</a>
+            </div>
+            
+            <div class ="bot_info_2">
+                <div>   
+                    <a class = "bot_info" href="#">+79788274857</a>
+                    <a class = "bot_info_line">|</a>
+                    <a class = "bot_info" href="#">+79788274333</a>
+                </div>
+                    <a class = "bot_info" href="#">internet-magazin@Kapous-crimea.ru</a>
+            </div>
+            <a class ="bot_logo" href = "#"> KapousCrimea</a>
+        </div>
+    </header_bot_container>
+</bot_info>
+</html>
