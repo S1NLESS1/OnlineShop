@@ -1,0 +1,510 @@
+body{
+    margin: 0;
+    background: white; /* цвет шрифта */
+; /*фон */
+    font-family: 'Montserrat Alternates', sans-serif; /* шрифт */
+    line-height: 1.6; /*отступ */
+    font-size: 15px;/*размер шрифта */
+    color: black; /* цвет шрифта */
+}
+
+*,
+*:before,
+*:after{
+    box-sizing:border-box;
+}
+
+h1,h2,h3,h4,h5,h6{
+    margin: 0;
+}
+
+.container{ /* границы */
+    width: 100%;
+    max-width: 1200px; /* ширина */
+    margin: 0 auto;
+}
+
+.container_logo{
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.intro { /* первый слайд */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 420px;
+    background: url("../images/intro.jpg") center no-repeat; /* по центру без повторов */
+    -webkit-background-size: cover;
+    background-size: cover; /* по всему экрану*/
+}
+
+.header{ /* шапка */
+    width: 100%;
+    padding-top: 30px; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.header_inner{
+ display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__logo{ /* логотип */
+    font-size: 43px;
+    font-weight: 700;
+    color: black;
+    text-decoration: none;
+}
+
+.Center_logo{
+    padding-top: 70px;
+    font-size: 100px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 1;
+}
+
+.nav{ /* навигационная панель */
+    font-size: 20px;
+    font-weight: 1000;
+    text-transform: uppercase;
+    
+}
+
+.nav__link{ /*изменение шапки */
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 10px;
+    position: relative;
+    
+    color: darkgreen;
+    text-decoration: none;
+    
+    transition: color 0.2s linear; /*длительность*/
+}
+
+.nav__link:hover { /* изменение цвета*/
+    color: aqua;
+}
+.nav__link:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+    
+    background-color: aqua;
+    opacity: 0;
+    
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+    
+    transition: opacity 0.2s linear;
+}
+.nav__link:hover:after { /* изменение цвета*/
+    opacity: 1.0;
+}
+
+/*Section*/
+.section{
+    padding: 50px 0;
+    margin: auto;
+}
+
+.section_header{
+    width: 100%;
+    max-width: 950px;
+    margin: 0 auto 40px;
+    text-align: center; /*выравнивание по центру*/
+}
+.section_suptitle{
+    font-size: 25px;
+    color: darkturquoise;
+}
+.section_title{
+    font-size: 45px;
+    color: black;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.section_suptitle:before{
+    content: "";
+    display: block;
+    width: 500px;
+    height: 3px;
+    background-color: black;
+    margin: 0 auto;
+    margin-bottom: 15px;
+}
+/*О бренде*/
+.about_text{
+    font-size: 20px;
+}
+
+/*Слайдер*/
+#slider {
+   border: 5px solid #eaeaea;
+   box-shadow: 1px 1px 5px rgba(0,0,0,0.7);
+   height: 330px;
+   width: 710px;
+   margin: 40px auto 0;
+   overflow: visible;
+   position: relative;
+}
+
+#mask {
+   overflow: hidden;
+   height: 320px;
+}
+
+#slider ul {
+   margin: 0;
+   padding: 0;
+   position: relative;
+}
+
+#slider li {
+   width: 700px;  /* Ширина изображения */
+   height: 320px; /* Высота изображения */
+   position: absolute;
+   right: -705px;	/* Исходное положение  (за пределами слайдера) */
+   list-style: none;
+}
+
+#slider li.firstanimation {
+   animation: cycle 40s linear infinite;
+}
+
+#slider li.secondanimation {
+   animation: cycletwo 40s linear infinite;
+}
+
+#slider li.thirdanimation {
+   animation: cyclethree 40s linear infinite;
+}
+
+#slider li.fourthanimation {
+   animation: cyclefour 40s linear infinite;
+}
+
+#slider li.fifthanimation {
+   animation: cyclefive 40s linear infinite;
+}
+
+
+@keyframes cycle {
+   0%  { right: 0px; } /* При запуске слайдера, первое изображение уже видимо */
+   2.5%  {right: 0px; } /* Стартовая позиция */
+   17.5% { right: 0px; opacity:1; z-index:0; } /* С 4% до 16 % (3 секунды) изображение видимо */
+   20% { right: 705px; opacity: 0; z-index: 0; } /* с 16% до 20% (1 секунды)выход изображения*/
+   21% { right: -705px; opacity: 0; z-index: -1; } /* Возвращение на исходную позицию за пределами маски */
+   95% { right: -705px; opacity: 0; z-index: 0; }
+   97.5% { right: -705px; opacity: 0; } /* С 96% до 100% (1 секунда) – вход */
+   100%{ right: 0px; opacity: 1; }
+}
+
+@keyframes cycletwo {
+   0%  { right: -705px; opacity: 0; } /* Исходная позиция за пределами маски */
+   17.5% { right: -705px; opacity: 0; }/* Начало движения с 16% */
+   20% { right: 0px; opacity: 1; }
+   22.5% { right: 0px; opacity: 1; }  /* С 20% до 24% (в течении 1 секунды) — вход*/
+   37.5% { right: 0px; opacity: 1; z-index: 0; }   /* С 24% до 36 % (3 секунды) изображение видимо */
+   40% { right: 705px; opacity: 0; z-index: 0; } /* С 36% до 40% (1 секунда)— выход */
+   41% { right: -705px; opacity: 0; z-index: -1; }   /* Возврат на исходную позицию */
+   100%{ right: -705px; opacity: 0; z-index: -1; }
+}
+
+@keyframes cyclethree {
+   0%  { right: -705px; opacity: 0; }
+   37.5% { right: -705px; opacity: 0; }
+   40% { right: 0px; opacity: 1; }
+   42.5% { right: 0px; opacity: 1; }
+   57.5% { right: 0px; opacity: 1; }
+   60% { right: 705px; opacity: 0; z-index: 0; }
+   61% { right: -705px; opacity: 0; z-index: -1; }
+   100%{ right: -705px; opacity: 0; z-index: -1; }
+}
+
+@keyframes cyclefour {
+   0%  { right: -705px; opacity: 0; }
+   57.5% { right: -705px; opacity: 0; }
+   60% { right: 0px; opacity: 1; }
+   62.5% { right: 0px; opacity: 1; }
+   77.5% { right: 0px; opacity: 1; z-index: 0; }
+   80% { right: 705px; opacity: 0; z-index: 0; }
+   81% { right: -705px; opacity: 0; z-index: -1; }
+   100%{ right: -705px; opacity: 0; z-index: -1; }
+}
+@keyframes cyclefive {
+   0%  { right: -705px; opacity: 0; }
+   77.5% { right: -705px; opacity: 0; }
+   80% { right: 0px; opacity: 1; }
+   82.5% { right: 0px; opacity: 1; }
+   97.5% { right: 0px; opacity: 1; z-index: 0; }
+   100%{ right: 705px; opacity: 0; z-index: 0; }
+}
+
+/*products*/
+.container_2{
+    width: 800px;
+    max-width: 100%;
+    right: 27%;
+    transform: translateX(27%);
+}
+
+.main_item{
+    list-style-type: none;
+}
+
+.container_catalog{
+    position: absolute;
+    width: 230px;
+    margin-left: -80px;
+    background-color: bisque;
+    margin-top: 88px;
+}
+
+.catalog_text_main{
+    width: 100%;
+    display: block;
+    text-align: center;
+    color: black;
+    font-size: 23px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.catalog_text{
+    left: -30px;
+    width: 180px;
+    display: block;
+    vertical-align: top;
+    margin: 0 10px;
+    position: relative;
+    
+    color: black;
+    font-size: 20px;
+    text-decoration: none;
+    transition: color 0.2s linear;
+}
+
+.catalog_text:hover {
+    color: aqua;
+}
+.ul_li{
+    display: none;
+}
+
+.catalog_text:focus ~ .ul_li, 
+.catalog_text:active ~ .ul_li, 
+.ul_li:hover{
+    display: block;
+}
+
+.catalog_nav_buttons{
+    background: darkturquoise;
+    width: 100px;
+    padding: 7px 7px;
+    margin-top: 5px;
+    color: white;
+    transition: background 0.2s linear;
+}
+
+.catalog_nav_buttons:hover{
+    background: aqua;
+    transition: background 0.2s linear;
+}
+
+.btn_nav{
+    background: antiquewhite;
+    color: black;
+    display: inline-block;
+    width: 110px;
+    max-width: 100%;
+    border-radius: 28px;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: 900;
+    font-size: 13px;
+    border: 0;
+    cursor: pointer;
+    text-align: center;
+}
+
+.catalog_text_mini{
+    vertical-align: top;
+    position: relative;
+    color: black;
+    font-size: 15px;
+    text-decoration: none;
+    transition: color 0.2s linear;
+}
+
+.catalog_text_mini:hover {
+    color: aqua;
+}
+
+/*новое меню*/
+
+.section_header_catalog{
+    margin-bottom: 40px;
+}
+.section_title_catalog{
+    font-size: 30px;
+    color: black;
+    text-align: center;
+    margin-right: 30px;
+}
+.catalog{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -35px;
+    background: bisque;
+    border: 2px solid darkturquoise;
+}
+
+.catalog_item{
+    width: calc(100%/3);
+    margin-bottom: 35px;
+    position: relative;
+    transition: transform 0.2s linear;
+    margin-top: 10px;
+}
+
+.catalog_item:hover{
+    transform: translate3d(5px,5px,0);
+    transition: transform 0.2s linear;
+}
+
+.catalog_item:before{
+    content: "";
+    background: #f7f7f7;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 3px;
+    height: 100%;
+    transform: translateX(-50%);
+}
+
+.catalog_item:nth-of-type(3n+1)::before{
+    content: none;
+}
+
+.product_img{
+    display: block;
+    margin: 0 auto;
+}
+
+.product_content{
+    flex-grow: 1;
+    text-align: center;
+}
+
+.product_title{
+    margin: 0 0 5px;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+}
+
+.product_price{
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 19px;
+    font-weight: 900;
+    margin-left: 30px;
+}
+
+.product_bottom{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.btn{
+    background: orange;
+    color: black;
+    display: inline-block;
+    width: 150px;
+    max-width: 100%;
+    border-radius: 28px;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: 900;
+    font-size: 15px;
+    border: 0;
+    cursor: pointer;
+    text-align: center;
+}
+
+.product_btn{
+    background: darkturquoise;
+    width: 110px;
+    padding: 10px 10px;
+    margin-right: 10px;
+    color: white;
+}
+
+.product_btn:hover{
+    background: lightgreen;
+}
+
+/*шапка нижняя*/
+.bot_container{
+    top: 2500px;
+    position: absolute; 
+    width: 100%;
+    height: 200px;
+    display: block;
+    background-color:darkturquoise;
+    
+}
+
+.bot_info{
+    position: relative;
+    display: inline-block;
+    font-size: 16px;
+    margin-right: 5px;
+    text-decoration: none;
+    color: black;
+    justify-content: space-between;  
+    top: 10px;
+    transition: color 0.2s linear;
+    transition: font-weight 0.2s linear;
+}
+
+.bot_info:hover{
+    color:aqua;
+    font-weight: 700;
+    transition: color 0.2s linear;
+    transition: font-weight 0.2s linear;
+}
+
+.bot_info_2{
+    position: absolute;
+    right: 25%;
+    transform: translateX(50%);
+    margin-bottom: 20px;
+}
+
+.bot_logo{
+    position: relative;
+    font-size: 43px;
+    font-weight: 700;
+    color: black;
+    text-decoration: none;
+    top: 20px;
+}
+.bot_info_line{
+    position: relative;
+    margin-right: 5px;
+    color: black;  
+    top: 10px;
+}
